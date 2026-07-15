@@ -88,6 +88,9 @@ function displayReport(report){
 
     document.getElementById("verificationDate").textContent =
     formatDateTime(new Date());
+    
+    document.getElementById("originalReport").href =
+    `pdfs/${report.laboratoryNumber}.pdf`;
 
     document.getElementById("footerReference").textContent =
     report.verification;
