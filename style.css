@@ -396,51 +396,66 @@ hr{
 
 }
 
-@media (max-width: 600px) {
+@media (max-width:600px){
 
-    body{
-        font-size:12px;
+    .container{
+        width:99%;
+        margin:8px auto;
+        border-radius:4px;
     }
 
-    h1{
-        font-size:18px;
+    .header{
+        padding:12px;
     }
 
-    h2{
+    .header img{
+        width:45px;
+        margin-bottom:6px;
+    }
+
+    .header h1{
         font-size:16px;
     }
 
-    h3{
-        font-size:14px;
+    .header p{
+        font-size:10px;
+    }
+
+    .check{
+        font-size:45px;
+        margin-top:15px;
+    }
+
+    .success{
+        font-size:18px;
+        margin-bottom:15px;
     }
 
     table{
-        font-size:11px;
-    }
-
-    th,
-    td{
-        font-size:11px;
-        padding:6px;
-    }
-
-    p{
-        font-size:11px;
-    }
-
-    a{
-        font-size:11px;
-    }
-
-    input,
-    select,
-    button{
-        font-size:12px;
-    }
-
-    .container{
         width:98%;
-        padding:10px;
+    }
+
+    td{
+        padding:6px;
+        font-size:11px;
+    }
+
+    td:first-child{
+        width:42%;
+    }
+
+    .footer{
+        font-size:10px;
+        padding:18px;
+    }
+
+    .reference{
+        font-size:11px;
+    }
+
+    #originalReport{
+        font-size:11px;
+        padding:8px 14px;
     }
 
 }
