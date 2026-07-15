@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mineral Verification Administration</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="admin">
+
+    <h2>Mineral Verification Administration</h2>
+
+    <p class="subtitle">
+        Create a new laboratory verification report.
+    </p>
+
+    <div class="form-group">
+
+        <label for="reportId">Report ID</label>
+
+        <input
+            type="text"
+            id="reportId"
+            placeholder="Example: 2346">
+
+    </div>
+
+    <div class="form-group">
+
+        <label for="clientName">Client Name</label>
+
+        <input
+            type="text"
+            id="clientName"
+            placeholder="Client Name">
+
+    </div>
+
+    <div class="form-group">
+
+        <label for="clientType">Client Type</label>
+
+        <select id="clientType">
+
+            <option value="External Client">External Client</option>
+
+            <option value="Internal Client">Internal Client</option>
+
+        </select>
+
+    </div>
+
+    <div class="form-group">
+
+        <label for="sampleType">Sample Type</label>
+
+        <select id="sampleType">
+
+            <option value="Bars">Bars</option>
+
+            <option value="Nuggets">Nuggets</option>
+
+            <option value="Rock">Rock</option>
+
+            <option value="Soil">Soil</option>
+
+            <option value="Water">Water</option>
+
+            <option value="Concentrate">Concentrate</option>
+
+            <option value="Other">Other</option>
+
+        </select>
+
+    </div>
+
+    <div class="form-group">
+
+        <label for="sampleReference">Sample Reference</label>
+
+        <input
+            type="text"
+            id="sampleReference"
+            placeholder="Sample Reference">
+
+    </div>
+
+    <div class="form-group">
+
+        <label for="reportDate">Report Date</label>
+
+        <input
+            type="date"
+            id="reportDate">
+
+    </div>
+
+    <div class="form-group">
+
+        <label for="approvedBy">Approved By</label>
+
+        <input
+            type="text"
+            id="approvedBy"
+            placeholder="Officer Name">
+
+    </div>
+
+    <button id="generateBtn">
+
+        Generate Report
+
+    </button>
+
+    <hr>
+
+    <h3>Verification URL</h3>
+
+    <input
+        type="text"
+        id="generatedUrl"
+        readonly>
+
+    <div class="button-row">
+
+        <button id="copyURL">
+
+            Copy URL
+
+        </button>
+
+        <button id="downloadJson">
+
+            Download JSON
+
+        </button>
+
+    </div>
+
+</div>
+
+<script src="admin.js"></script>
+
+</body>
+
+</html>
