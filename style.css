@@ -396,18 +396,51 @@ hr{
 
 }
 
-@media(max-width:600px){
+@media (max-width: 600px) {
 
-.button-row{
+    body{
+        font-size:12px;
+    }
 
-    flex-direction:column;
+    h1{
+        font-size:18px;
+    }
 
-}
+    h2{
+        font-size:16px;
+    }
 
-button{
+    h3{
+        font-size:14px;
+    }
 
-    width:100%;
+    table{
+        font-size:11px;
+    }
 
-}
+    th,
+    td{
+        font-size:11px;
+        padding:6px;
+    }
+
+    p{
+        font-size:11px;
+    }
+
+    a{
+        font-size:11px;
+    }
+
+    input,
+    select,
+    button{
+        font-size:12px;
+    }
+
+    .container{
+        width:98%;
+        padding:10px;
+    }
 
 }
