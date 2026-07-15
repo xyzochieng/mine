@@ -104,7 +104,7 @@ document.getElementById("generateBtn").addEventListener("click", function(){
 
     // Generate URL
 
-    const baseURL = "https://YOUR_USERNAME.github.io/mineral-verification/";
+    const baseURL = "https://xyzochieng.github.io/mine/index.html";
 
     document.getElementById("generatedUrl").value =
         `${baseURL}?id=${reportId}`;
