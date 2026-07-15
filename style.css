@@ -399,13 +399,13 @@ hr{
 @media (max-width:600px){
 
     .container{
-        width:99%;
+        width:85%;
         margin:8px auto;
         border-radius:4px;
     }
 
     .header{
-        padding:12px;
+        padding:16px;
     }
 
     .header img{
