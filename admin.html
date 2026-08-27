@@ -13,30 +13,48 @@
 
 </head>
 
+
 <body>
+
 
 <div class="admin">
 
+
     <h2>Mineral Verification Administration</h2>
+
 
     <p class="subtitle">
         Create a new laboratory verification report.
     </p>
 
+
+    <!-- ============================= -->
+    <!-- REPORT ID -->
+    <!-- ============================= -->
+
     <div class="form-group">
 
-        <label for="reportId">Report ID</label>
+        <label for="reportId">
+            Report ID
+        </label>
 
         <input
             type="text"
             id="reportId"
-            placeholder="Example: 2346">
+            placeholder="Example: 2350">
 
     </div>
 
+
+    <!-- ============================= -->
+    <!-- CLIENT NAME -->
+    <!-- ============================= -->
+
     <div class="form-group">
 
-        <label for="clientName">Client Name</label>
+        <label for="clientName">
+            Client Name
+        </label>
 
         <input
             type="text"
@@ -45,58 +63,109 @@
 
     </div>
 
+
+    <!-- ============================= -->
+    <!-- CLIENT TYPE -->
+    <!-- ============================= -->
+
     <div class="form-group">
 
-        <label for="clientType">Client Type</label>
+        <label for="clientType">
+            Client Type
+        </label>
 
         <select id="clientType">
 
-            <option value="External Client">External Client</option>
+            <option value="External Client">
+                External Client
+            </option>
 
-            <option value="Internal Client">Internal Client</option>
+            <option value="Internal Client">
+                Internal Client
+            </option>
 
         </select>
 
     </div>
 
+
+    <!-- ============================= -->
+    <!-- SAMPLE TYPE -->
+    <!-- ============================= -->
+
     <div class="form-group">
 
-        <label for="sampleType">Sample Type</label>
+        <label for="sampleType">
+            Sample Type
+        </label>
 
         <select id="sampleType">
 
-            <option value="Bars">Bars</option>
+            <option value="Bars">
+                Bars
+            </option>
 
-            <option value="Nuggets">Nuggets</option>
+            <option value="Nuggets">
+                Nuggets
+            </option>
 
-            <option value="Rock">Rock</option>
+            <option value="Rock">
+                Rock
+            </option>
 
-            <option value="Soil">Soil</option>
+            <option value="Soil">
+                Soil
+            </option>
 
-            <option value="Water">Water</option>
+            <option value="Water">
+                Water
+            </option>
 
-            <option value="Concentrate">Concentrate</option>
+            <option value="Concentrate">
+                Concentrate
+            </option>
 
-            <option value="Other">Other</option>
+            <option value="Other">
+                Other
+            </option>
 
         </select>
 
     </div>
 
+
+    <!-- ============================= -->
+    <!-- SAMPLE REFERENCE -->
+    <!-- ============================= -->
+
     <div class="form-group">
 
-        <label for="sampleReference">Sample Reference</label>
+        <label for="sampleReference">
+            Sample Reference
+        </label>
 
         <input
             type="text"
             id="sampleReference"
-            placeholder="Sample Reference">
+            placeholder="MCL-2026-002350">
+
+        <small>
+            Automatically generated from the Report ID.
+            You can edit it if necessary.
+        </small>
 
     </div>
 
+
+    <!-- ============================= -->
+    <!-- REPORT DATE -->
+    <!-- ============================= -->
+
     <div class="form-group">
 
-        <label for="reportDate">Report Date</label>
+        <label for="reportDate">
+            Report Date
+        </label>
 
         <input
             type="date"
@@ -104,16 +173,29 @@
 
     </div>
 
+
+    <!-- ============================= -->
+    <!-- APPROVED BY -->
+    <!-- ============================= -->
+
     <div class="form-group">
 
-        <label for="approvedBy">Approved By</label>
+        <label for="approvedBy">
+            Approved By
+        </label>
 
         <input
             type="text"
             id="approvedBy"
+            value="MICAH KEREU"
             placeholder="Officer Name">
 
     </div>
+
+
+    <!-- ============================= -->
+    <!-- GENERATE BUTTON -->
+    <!-- ============================= -->
 
     <button id="generateBtn">
 
@@ -121,16 +203,43 @@
 
     </button>
 
+
     <hr>
 
-    <h3>Verification URL</h3>
+
+    <!-- ============================= -->
+    <!-- VERIFICATION URL -->
+    <!-- ============================= -->
+
+    <h3>
+        Verification URL
+    </h3>
+
 
     <input
         type="text"
         id="generatedUrl"
         readonly>
 
+
+    <!-- ============================= -->
+    <!-- QR CODE -->
+    <!-- ============================= -->
+
+    <h3>
+        QR Code
+    </h3>
+
+
+    <div id="qrcode"></div>
+
+
+    <!-- ============================= -->
+    <!-- ACTION BUTTONS -->
+    <!-- ============================= -->
+
     <div class="button-row">
+
 
         <button id="copyURL">
 
@@ -138,17 +247,42 @@
 
         </button>
 
+
+        <button id="copyQR">
+
+            Copy QR Code
+
+        </button>
+
+
         <button id="downloadJson">
 
             Download JSON
 
         </button>
 
+
     </div>
+
 
 </div>
 
+
+<!-- ============================= -->
+<!-- QR CODE LIBRARY -->
+<!-- ============================= -->
+
+<script
+    src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js">
+</script>
+
+
+<!-- ============================= -->
+<!-- ADMIN JAVASCRIPT -->
+<!-- ============================= -->
+
 <script src="admin.js"></script>
+
 
 </body>
 
