@@ -13,7 +13,7 @@ const STARTING_REPORT_ID = 2350;
 
 // Verification page
 const BASE_URL =
-    "https://xyzochieng.github.io/mine/index.html";
+    "https://laboratorymining.co.ke/index.html";
 
 
 // ==========================================
