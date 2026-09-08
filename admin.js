@@ -335,7 +335,7 @@ document
             const report = {
 
                 verification:
-                    verificationUrl,
+                    sampleReference,
 
                 laboratoryNumber:
                     reportId,
