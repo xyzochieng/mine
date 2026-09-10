@@ -415,19 +415,6 @@ document
 
 
             // ==================================
-            // STORE SAMPLE REFERENCE FOR QR DOWNLOAD
-            // ==================================
-            //
-            // Used later by the Download QR Code
-            // button so the PNG filename matches
-            // this report, not the next one queued
-            // up below.
-
-            window.currentSampleReference =
-                sampleReference;
-
-
-            // ==================================
             // CREATE JSON DOWNLOAD
             // ==================================
 
@@ -708,95 +695,6 @@ document
 
 
             }
-
-        }
-    );
-
-
-// ==========================================
-// DOWNLOAD QR CODE
-// ==========================================
-
-document
-    .getElementById("downloadQR")
-    .addEventListener(
-        "click",
-        function () {
-
-
-            // Find QR canvas
-
-            const qrCanvas =
-                document.querySelector(
-                    "#qrcode canvas"
-                );
-
-
-            // QR hasn't been generated
-
-            if (!qrCanvas) {
-
-                alert(
-                    "Generate the report first."
-                );
-
-                return;
-
-            }
-
-
-            // Use the sample reference from the
-            // report this QR code belongs to, not
-            // whatever is currently sitting in the
-            // Sample Reference field (which by now
-            // shows the NEXT report).
-
-            const fileName =
-                window.currentSampleReference ||
-                "qr-code";
-
-
-            qrCanvas.toBlob(
-                function (blob) {
-
-
-                    if (!blob) {
-
-                        alert(
-                            "Unable to create QR code image."
-                        );
-
-                        return;
-
-                    }
-
-
-                    const link =
-                        document.createElement(
-                            "a"
-                        );
-
-
-                    link.href =
-                        URL.createObjectURL(
-                            blob
-                        );
-
-
-                    link.download =
-                        `${fileName}.png`;
-
-
-                    link.click();
-
-
-                    URL.revokeObjectURL(
-                        link.href
-                    );
-
-
-                }
-            );
 
         }
     );
